@@ -40,7 +40,7 @@ function Reveal() {
         </Title>
       </div>
       <Row justify="center">
-        <Col xl={{ offset: 6, span: 12 }}>
+        <Col xl={{ offset: 24, span: 0 }}>
           <div>
             <span className="span_typewritter">
               <Typewriter

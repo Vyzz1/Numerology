@@ -45,6 +45,7 @@ function Home() {
   let body = {};
   const naviagte = useNavigate();
   const handleFinish = (e) => {
+    window.scrollTo(0, 0);
     body = {
       name: e.name,
       dateOfBirth: `${e.day}/${e.month}/${e.year}`,
@@ -78,7 +79,7 @@ function Home() {
           </Title>
         </div>
         <Form onFinish={handleFinish}>
-          <Row gutter={[8, 20]}>
+          <Row gutter={[8, 0]}>
             <Col
               xl={{ span: 15, offset: 5 }}
               lg={{ span: 15, offset: 5 }}
@@ -113,7 +114,7 @@ function Home() {
               lg={{ span: 5, offset: 5 }}
               md={{ span: 5, offset: 5 }}
               sm={{ span: 8, offset: 0 }}
-              xs={{ span: 8, offset: 0 }}
+              xs={{ span: 24, offset: 0 }}
               className={
                 loading === true
                   ? "  animate__animated animate__fadeOutBottomLeft "
@@ -146,7 +147,7 @@ function Home() {
               lg={{ span: 5 }}
               md={{ span: 5 }}
               sm={{ span: 8 }}
-              xs={{ span: 8, offset: 0 }}
+              xs={{ span: 24, offset: 0 }}
               className={
                 loading === true
                   ? " animate__animated animate__bounceOutDown  animate__slow"
@@ -179,7 +180,7 @@ function Home() {
               lg={{ span: 5 }}
               md={{ span: 5 }}
               sm={{ span: 8 }}
-              xs={{ span: 8 }}
+              xs={{ span: 24 }}
               className={
                 loading === true
                   ? "  animate__animated animate__fadeOutBottomRight "

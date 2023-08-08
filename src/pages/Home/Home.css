@@ -42,12 +42,12 @@
     font-weight: 600 !important;
 }
 @media (max-width:500px) {
-    .ant-select-selection-item{
+    /* .ant-select-selection-item{
         font-size: 12px;
     }
     .label_form.error{
         font-size: 12px !important;
-    }
+    } */
     
 }
 
@@ -86,12 +86,12 @@
     color: #0843c1 !important;
 }
 @media (max-width:510px) {
-    .label_form{
+    /* .label_form{
         font-size: 13px;
     }
     .label_form.name{
         font-size: 16px;
-    }
+    } */
 }
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
@@ -119,7 +119,7 @@
       0px 0px 0.5em 0px var(--glow-color);
     box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
       0px 0px 0.5em 0px var(--glow-color);
-    animation: border-flicker 2s linear infinite;
+    /* animation: border-flicker 2s linear infinite; */
   }
   
   .glowing-txt {
@@ -130,12 +130,12 @@
     -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
       0 0 0.45em var(--glow-color);
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
-    animation: text-flicker 3s linear infinite;
+    /* animation: text-flicker 3s linear infinite; */
   }
   
   .faulty-letter {
     opacity: 0.5;
-    animation: faulty-flicker 2s linear infinite;
+    /* animation: faulty-flicker 2s linear infinite; */
   }
   
   .glowing-btn::before {
