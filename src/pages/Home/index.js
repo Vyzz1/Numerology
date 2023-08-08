@@ -216,8 +216,10 @@ function Home() {
                   : ""
               }
             >
-              <button type="submit" className="button">
-                Xem Kết Quả
+              <button class="glowing-btn" type="submit">
+                <span class="glowing-txt">
+                  Xem kết quả<span class="faulty-letter"></span>
+                </span>
               </button>
             </Col>
           </Row>
