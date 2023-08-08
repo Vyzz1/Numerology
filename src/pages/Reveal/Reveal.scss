@@ -1,0 +1,66 @@
+@font-face {
+  font-family: testFont;
+  src: url(MACHINE.otf);
+}
+@font-face {
+  font-family: test1;
+  src: url(AquireBold-8Ma60.otf);
+}
+@font-face {
+  font-family: test2;
+  src: url(sunflower.otf);
+}
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+.box {
+  background: transparent;
+  padding: 15px 8px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  max-height: 220px;
+  border: 1px solid rgb(0, 8, 255);
+  &__head {
+    text-align: center;
+    border-bottom: 1px solid #e4dede;
+    padding-bottom: 8px;
+    font-size: 16px;
+    &-title {
+      font-size: 2.25vh !important;
+      color: aliceblue;
+      font-weight: 650;
+    }
+    &-sub {
+      color: #ccc;
+      font-weight: 350;
+      font-style: italic;
+      font-family: testFont;
+      font-size: 0.8rem;
+      @media (max-width: 640px) {
+        font-size: 0.7rem;
+      }
+    }
+  }
+  &__number {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 50px;
+    font-family: test1;
+    font-weight: 700;
+    color: #0843c1;
+  }
+}
+
+.span_typewritter {
+  font-size: 38px;
+  margin-left: 15px;
+  color: #fffaf4;
+  font-family: "Dancing Script", cursive;
+  font-style: italic;
+  font-weight: 700;
+}
+.title-reveal {
+  text-shadow: -13px -6px 14px rgba(255, 255, 255, 0.91);
+  font-size: 48px !important;
+}
