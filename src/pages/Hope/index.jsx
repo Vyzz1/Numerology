@@ -31,6 +31,8 @@ function Hope() {
     const handleTouchStart = () => {
       if (play === true) {
         start();
+      } else {
+        return;
       }
     };
 
@@ -193,6 +195,10 @@ function Hope() {
           justifyContent: "center",
           alignItems: "center",
           marginBottom: "45px",
+        }}
+        onClick={() => {
+          audio.pause();
+          setPlay(false);
         }}
       >
         <video
