@@ -196,7 +196,7 @@ function Hope() {
           alignItems: "center",
           marginBottom: "45px",
         }}
-        onClick={() => {
+        onTouchStart={() => {
           audio.pause();
           setPlay(false);
         }}
@@ -204,7 +204,7 @@ function Hope() {
         <video
           className="video"
           controls
-          onClick={() => {
+          onTouchStart={() => {
             audio.pause();
             setPlay(false);
           }}
