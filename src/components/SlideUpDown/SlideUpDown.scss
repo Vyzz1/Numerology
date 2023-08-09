@@ -1,0 +1,49 @@
+.wrapper {
+  position: fixed;
+  top: 10;
+
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 576px) {
+    margin-bottom: 10px; /* (ở responsive breakpoint xs) */
+  }
+  &-contain {
+    width: 35px;
+    height: 64px;
+    border-radius: 1.5rem; /* Giá trị 3xl chưa biết, đây là giả định */
+    border-width: 4px;
+    border-color: #ccc; /* Giả định màu */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Giả định giá trị align-items */
+    padding: 0.5rem; /* Giá trị 2 chưa biết, đây là giả định */
+    background: transparent;
+  }
+  &-motion {
+    width: 3rem;
+    position: relative;
+    height: 3rem;
+    border-radius: 8px;
+    margin-bottom: 0.25rem;
+    background: transparent;
+    border: 2px solid #ccc;
+    &-dev {
+      content: "";
+      display: block;
+      background: radial-gradient(#e66465, #9198e5);
+      box-shadow: -11px 12px 17px 9px rgba(41, 155, 144, 0.32);
+      -webkit-box-shadow: -11px 12px 17px 9px rgba(41, 155, 144, 0.32);
+      -moz-box-shadow: -11px 12px 17px 9px rgba(41, 155, 144, 0.32);
+      width: 0.75rem;
+      border-radius: 50%;
+      height: 0.75rem;
+      z-index: 1;
+      position: absolute;
+      opacity: 1;
+      top: 3px;
+      left: 2px;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { SetCookie } from "../../helpers/SetCookie";
 import { useNavigate } from "react-router-dom";
 import { LoadingOutlined } from "@ant-design/icons";
 import "animate.css";
+import { convertToUnsigned } from "../../helpers/calculateNumber";
 function Home() {
   let optionsDay = [];
   for (let i = 1; i <= 31; i++) {
@@ -46,18 +47,29 @@ function Home() {
   const naviagte = useNavigate();
   const handleFinish = (e) => {
     window.scrollTo(0, 0);
-    body = {
-      name: e.name,
-      dateOfBirth: `${e.day}/${e.month}/${e.year}`,
-    };
-    SetCookie("info", JSON.stringify(body), 1000, 1000);
-    setLoading(true);
-    setTimeout(() => {
-      setTip(<h2 style={{ color: "red" }}>Done !</h2>);
+    let temp = convertToUnsigned(e.name.toLowerCase());
+    if (temp.includes("trang") || temp.includes("trag")) {
+      setLoading(true);
       setTimeout(() => {
-        naviagte("/reveal");
-      }, 1200);
-    }, 2000);
+        setTip(<h2 style={{ color: "red" }}>Oops.. !</h2>);
+        setTimeout(() => {
+          naviagte("/private");
+        }, 1200);
+      }, 2000);
+    } else {
+      body = {
+        name: e.name,
+        dateOfBirth: `${e.day}/${e.month}/${e.year}`,
+      };
+      SetCookie("info", JSON.stringify(body), 1000, 1000);
+      setLoading(true);
+      setTimeout(() => {
+        setTip(<h2 style={{ color: "red" }}>Done !</h2>);
+        setTimeout(() => {
+          naviagte("/reveal");
+        }, 1200);
+      }, 2000);
+    }
   };
   const [loading, setLoading] = useState(false);
   const [tip, setTip] = useState(<h2>Đang tính toán</h2>);

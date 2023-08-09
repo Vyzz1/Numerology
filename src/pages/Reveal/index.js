@@ -19,6 +19,7 @@ import {
 
 function Reveal() {
   const { dateOfBirth, name } = JSON.parse(GetCookie("info"));
+  console.log(name);
   let rulingNumber = calculateRulingNumber(dateOfBirth);
   let lifePathNumber = calculateLifePathNumber(dateOfBirth);
   let destinyNumber = calculateDestinyNumber(name);
@@ -28,7 +29,6 @@ function Reveal() {
   let passionNumber = calculatePassionNumber(name);
   let attitudeNumber = calculateAttitudeNumber(dateOfBirth);
   let missingNumber = calculateMissingNumber(name);
-  console.log(attitudeNumber);
   return (
     <>
       <div
@@ -40,22 +40,21 @@ function Reveal() {
         </Title>
       </div>
       <Row justify="center">
-        <Col xl={{ offset: 24, span: 0 }}>
-          <div>
-            <span className="span_typewritter">
-              <Typewriter
-                words={[name, dateOfBirth]}
-                loop={true}
-                cursor
-                cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={80}
-                delaySpeed={1000}
-              />
-            </span>
+        <Col>
+          <div className="span_typewritter">
+            <Typewriter
+              words={[name, dateOfBirth]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={80}
+              delaySpeed={1000}
+            />
           </div>
         </Col>
       </Row>
+
       <Row gutter={[20, 10]}>
         <Col
           xl={{ span: 3, offset: 5 }}

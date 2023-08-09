@@ -1,5 +1,6 @@
 import Layout from "../layout";
 import Home from "../pages/Home";
+import Hope from "../pages/Hope";
 import Reveal from "../pages/Reveal";
 export const routers = [
   {
@@ -13,6 +14,10 @@ export const routers = [
       {
         element: <Reveal />,
         path: "reveal",
+      },
+      {
+        element: <Hope />,
+        path: "private",
       },
     ],
   },

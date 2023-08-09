@@ -53,14 +53,17 @@
 }
 
 .span_typewritter {
-  font-size: 35px;
+  font-size: 38px;
   margin-left: 15px;
   color: #fffaf4;
   font-family: "Dancing Script", cursive;
   font-style: italic;
   font-weight: 700;
+  @media (max-width: 576px) {
+    font-size: 32px;
+  }
 }
 .title-reveal {
-  // text-shadow: -13px -6px 14px rgba(255, 255, 255, 0.91);
+  text-shadow: -13px -6px 14px rgba(255, 255, 255, 0.91);
   font-size: 40px !important;
 }
