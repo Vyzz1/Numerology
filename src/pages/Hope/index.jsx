@@ -204,7 +204,7 @@ function Hope() {
         <video
           className="video"
           controls
-          onTouchStart={() => {
+          onPlay={() => {
             audio.pause();
             setPlay(false);
           }}
