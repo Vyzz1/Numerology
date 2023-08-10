@@ -29,16 +29,17 @@ function Hope() {
   useEffect(() => {
     const handleTouchStart = () => {
       if (play) {
+        console.logI("touchStart");
         start();
       } else {
         return;
       }
     };
 
-    window.addEventListener("click", handleTouchStart);
+    window.addEventListener("touchstart", handleTouchStart);
 
     return () => {
-      window.removeEventListener("click", handleTouchStart);
+      window.removeEventListener("touchstart", handleTouchStart);
     };
   }, [play]);
   const handleOnClick = () => {
