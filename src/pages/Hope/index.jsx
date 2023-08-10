@@ -16,7 +16,6 @@ import gif from "../Hope/gif/nyan-cat.gif";
 import SlideUpDown from "../../components/SlideUpDown";
 function Hope() {
   const [play, setPlay] = useState(true);
-  let timerInterval;
 
   let audio = new Audio(mp3);
   audio.volume = 0.3;
@@ -29,17 +28,17 @@ function Hope() {
   };
   useEffect(() => {
     const handleTouchStart = () => {
-      if (play === true) {
+      if (play) {
         start();
       } else {
         return;
       }
     };
 
-    window.addEventListener("mousedown", handleTouchStart);
+    window.addEventListener("click", handleTouchStart);
 
     return () => {
-      window.removeEventListener("mousedown", handleTouchStart);
+      window.removeEventListener("click", handleTouchStart);
     };
   }, [play]);
   const handleOnClick = () => {
@@ -61,7 +60,7 @@ function Hope() {
       });
     }, 500);
   };
-
+  let timerInterval;
   const navigate = useNavigate();
   const handleVisit = () => {
     SetCookie("info", JSON.stringify(obj), 1000, 1000);
@@ -89,7 +88,6 @@ function Hope() {
         clearInterval(timerInterval);
       },
     }).then((result) => {
-      /* Read more about handling dismissals below */
       if (result.dismiss === Swal.DismissReason.timer) {
         audio.pause();
         setPlay(false);
@@ -97,6 +95,16 @@ function Hope() {
       }
     });
   };
+  useEffect(() => {
+    const handle = () => {
+      audio.pause();
+      setPlay(false);
+    };
+    window.addEventListener("blur", handle);
+    return () => {
+      window.removeEventListener("blur", handle);
+    };
+  }, []);
   return (
     <>
       <div
