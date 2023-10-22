@@ -16,7 +16,6 @@ import gif from "../Hope/gif/nyan-cat.gif";
 import SlideUpDown from "../../components/SlideUpDown";
 function Hope() {
   const [play, setPlay] = useState(true);
-
   let audio = new Audio(mp3);
   audio.volume = 0.3;
   const start = () => {
@@ -118,7 +117,6 @@ function Hope() {
         <div className="heart"></div>
       </div>
       <SlideUpDown />
-
       <Row justify={"center"}>
         <span className="span_typewritter">
           <Typewriter
