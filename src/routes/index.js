@@ -15,10 +15,10 @@ export const routers = [
         element: <Reveal />,
         path: "reveal",
       },
-      {
-        element: <Hope />,
-        path: "private",
-      },
+      // {
+      //   element: <Hope />,
+      //   path: "private",
+      // },
     ],
   },
 ];
